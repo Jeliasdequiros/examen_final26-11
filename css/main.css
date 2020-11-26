@@ -365,7 +365,7 @@ template {
 
 .header {
   width: 100%;
-  background-color: #C4C4C4;
+  background-color: #CBFFD6;
   height: 10vh;
   padding: 0.625rem;
   display: flex;
@@ -394,7 +394,7 @@ template {
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 420px) and (orientation: portrait) {
   .header__logo_texto {
-    padding: 0 0 0 3.75rem;
+    padding: 0 0 0 5.625rem;
     font-size: convertir(18);
   }
 }
