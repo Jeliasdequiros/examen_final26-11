@@ -4,6 +4,7 @@ include ../config/config
 //-MIXINS si los vamos a necesitar
 
 include ../mixins/mix_head
+include ../mixins/mix_picture
 
 <!DOCTYPE html>
 html(lang="es")
@@ -19,7 +20,7 @@ html(lang="es")
 
         //-MAIN
         main.main
-            block main
+            include main.pug
 
         //-FOOTER
         footer.footer   

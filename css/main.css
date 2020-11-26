@@ -449,3 +449,33 @@ body {
   color: #000;
   font-family: sans-serif;
 }
+
+.main__chico {
+  margin-top: 1.25rem;
+}
+
+section {
+  /* VARIABLES */
+  /* VARIABLES */
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 868px) and (orientation: portrait) {
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

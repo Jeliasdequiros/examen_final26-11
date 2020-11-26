@@ -1,4 +1,21 @@
-<!DOCTYPE html>
+
+<!-- nombre= nombre del fichero-->
+<!-- alter= texto alternativo cuando no hay imagen-->
+<!-- descripcion= formatos que queremos dar donde:
+            m=movil
+            i=ipad
+            d=desktop 
+Se pueden introducir en cualquier orden o no introducir nada
+Ej. 'dim' 'dm' 'i' etc.
+-->
+<!--minM,maxM,minI,maxI,minD,maxD   valores minimosy maximos por defecto,por si no queremos introducirlos
+-->
+<!-- La logica es SI(if) tenemos(not null) "descripcion" para CADA(each) valor
+hacemos lo que corresponde en cada caso,si la "descripcion" es null
+significa que no hemos introducido nada con lo cual hacemos los 3 casos
+
++picture('dog', 'no image','dm')
+--><!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="utf-8"/>
@@ -31,6 +48,30 @@
       </nav>
     </header>
     <main class="main">
+      <section class="main__chica">
+        <picture>
+          <source srcset="/assets/img/smartphone/img1.jpg 1x,/assets/img/smartphone/img1@2x.jpg 2x,/assets/img/smartphone/img1@3x.jpg 3x" media="(min-width:0px) and (max-width:767px)"/>
+          <source srcset="/assets/img/tablet/img1.jpg 1x,/assets/img/tablet/img1@2x.jpg 2x" media="(min-width:768px) and (max-width:900px)"/>
+          <source srcset="/assets/img/desktop/img1.jpg 1x,/assets/img/desktop/img1@2x.jpg 2x" media="(min-width:1200px) and (max-width:undefined" )=")"/><img src="/assets/img/desktop/img1.jpg" alt="chica"/>
+        </picture>
+        <picture>
+          <source srcset="/assets/img/smartphone/img2.jpg 1x,/assets/img/smartphone/img2@2x.jpg 2x,/assets/img/smartphone/img2@3x.jpg 3x" media="(min-width:0px) and (max-width:767px)"/>
+          <source srcset="/assets/img/tablet/img2.jpg 1x,/assets/img/tablet/img2@2x.jpg 2x" media="(min-width:768px) and (max-width:900px)"/>
+          <source srcset="/assets/img/desktop/img2.jpg 1x,/assets/img/desktop/img2@2x.jpg 2x" media="(min-width:1200px) and (max-width:undefined" )=")"/><img src="/assets/img/desktop/img2.jpg" alt="perro"/>
+        </picture>
+      </section>
+      <section class="main__chico">
+        <picture>
+          <source srcset="/assets/img/smartphone/img3.jpg 1x,/assets/img/smartphone/img3@2x.jpg 2x,/assets/img/smartphone/img3@3x.jpg 3x" media="(min-width:0px) and (max-width:767px)"/>
+          <source srcset="/assets/img/tablet/img3.jpg 1x,/assets/img/tablet/img3@2x.jpg 2x" media="(min-width:768px) and (max-width:900px)"/>
+          <source srcset="/assets/img/desktop/img3.jpg 1x,/assets/img/desktop/img3@2x.jpg 2x" media="(min-width:1200px) and (max-width:undefined" )=")"/><img src="/assets/img/desktop/img3.jpg" alt="chico"/>
+        </picture>
+        <picture>
+          <source srcset="/assets/img/smartphone/img4.jpg 1x,/assets/img/smartphone/img4@2x.jpg 2x,/assets/img/smartphone/img4@3x.jpg 3x" media="(min-width:0px) and (max-width:767px)"/>
+          <source srcset="/assets/img/tablet/img4.jpg 1x,/assets/img/tablet/img4@2x.jpg 2x" media="(min-width:768px) and (max-width:900px)"/>
+          <source srcset="/assets/img/desktop/img4.jpg 1x,/assets/img/desktop/img4@2x.jpg 2x" media="(min-width:1200px) and (max-width:undefined" )=")"/><img src="/assets/img/desktop/img4.jpg" alt="gato"/>
+        </picture>
+      </section>
     </main>
     <footer class="footer">  </footer>
   </body>

@@ -1,0 +1,23 @@
+.main__chico{
+    margin-top: convertir(20);
+}
+section{
+    @include mediaQuery(ipad){
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    }
+    @include mediaQuery(escritorio){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+main{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
