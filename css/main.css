@@ -449,6 +449,56 @@ label {
   }
 }
 
+input:checked ~ nav {
+  /* VARIABLES */
+  /* VARIABLES */
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 420px) and (orientation: portrait) {
+  input:checked ~ nav {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    background-color: #276735;
+    z-index: 2;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    flex-direction: column;
+    padding: 1.25rem 0;
+  }
+  input:checked ~ nav a {
+    padding: 1.25rem;
+    color: #fff;
+  }
+  input:checked ~ nav .menu__logotipo {
+    display: none;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 868px) and (orientation: portrait) {
+  input:checked ~ nav {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+    background-color: #276735;
+    z-index: 2;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    flex-direction: column;
+    padding: 1.25rem 0;
+    text-align: right;
+  }
+  input:checked ~ nav a {
+    padding: 1.25rem;
+    color: #fff;
+  }
+  input:checked ~ nav .menu__logotipo {
+    display: none;
+  }
+}
+
 body {
   height: 100vh;
   background-color: #fff;

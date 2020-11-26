@@ -58,6 +58,7 @@ label{
         display:none;
     }
 }
+//nav para el escritorio, oculto en movil y ipad
 .header__menu{
     @include mediaQuery(mobil){
         display:none;
@@ -77,3 +78,51 @@ label{
 
 }
 
+input:checked~nav{
+    @include mediaQuery(mobil){
+    width:50vw;
+    height:100vh;
+    display: flex;
+    justify-content: start;
+    background-color: $verde-oscuro;
+    z-index:2;
+    position: absolute;
+    top:10vh;
+    left: 0;
+    flex-direction: column;
+    padding:convertir(20) 0;
+    
+    a{
+        padding: convertir(20);
+        color:$blanco;
+    }
+
+    .menu__logotipo{
+        display:none;
+    }
+    }
+    @include mediaQuery(ipad){
+        width:50vw;
+    height:100vh;
+    display: flex;
+    justify-content: end;
+    background-color: $verde-oscuro;
+    z-index:2;
+    position: absolute;
+    top:10vh;
+   right: 0;
+    flex-direction: column;
+    padding:convertir(20) 0;
+    text-align: right;
+    
+    a{
+        padding: convertir(20);
+        color:$blanco;
+    }
+
+    .menu__logotipo{
+        display:none;
+    }
+    }
+    
+}
