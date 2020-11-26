@@ -3,20 +3,32 @@
     margin-top: convertir(20);
 }
 
-//position relative para los dos sections para poder colocar la flecha
+//position relative para los dos sections para poder colocar la flecha y el texto
 .main__chica, .main__chico{
  position:relative;
     
 }
+main{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
 
+//colocacion de la flecha en mobil y escritorio
 .chica__flecha{
     @include mediaQuery(mobil){
         position: absolute;
         left: 40%;
     }
+    @include mediaQuery(ipad){
+        position: absolute;
+        left: 49%;
+        transform:rotate(-90deg);
+    }
     @include mediaQuery(escritorio){
         position: absolute;
-        top: 43%;
+        top: 39.5%;
         left: 48%;
     }
 }
@@ -32,11 +44,39 @@ section{
         align-items: center;
     }
 
-
 }
-main{
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
+.chica__texto, .chico__texto{
+    background-color:rgba(236, 227, 227, 0.61);
+    padding: convertir(15) convertir(20);
+    h4{
+        font-size:$size18;
+        margin: 0;
+    }
+    h6{
+        font-size:$size-base;
+        margin: 0;
+    }
+
+
+    @include mediaQuery(mobil){
+    
+    width:100vw;
+    
+    position:absolute;
+    z-index: 1;
+    top: 85%;
+    
+}
+
+@include mediaQuery(ipad){
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    left: 53%;
+    width:50%;
+}
+@include mediaQuery(escritorio){
+    background-color: #fff;
+    align-self: flex-start;
+}
 }

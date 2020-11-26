@@ -350,6 +350,10 @@ template {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .menu__logotipo {
   font-size: convertir(39.43);
 }
@@ -360,6 +364,7 @@ template {
 }
 
 .header {
+  width: 100%;
   background-color: #C4C4C4;
   height: 10vh;
   padding: 0.625rem;
@@ -458,7 +463,15 @@ body {
   position: relative;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .chica__flecha {
+  /* VARIABLES */
   /* VARIABLES */
   /* VARIABLES */
 }
@@ -468,10 +481,17 @@ body {
     left: 40%;
   }
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 868px) and (orientation: portrait) {
+  .chica__flecha {
+    position: absolute;
+    left: 49%;
+    transform: rotate(-90deg);
+  }
+}
 @media only screen and (min-width: 1366px) {
   .chica__flecha {
     position: absolute;
-    top: 43%;
+    top: 39.5%;
     left: 48%;
   }
 }
@@ -495,9 +515,41 @@ section {
   }
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.chica__texto, .chico__texto {
+  background-color: rgba(236, 227, 227, 0.61);
+  padding: 0.9375rem 1.25rem;
+  /* VARIABLES */
+  /* VARIABLES */
+  /* VARIABLES */
+}
+.chica__texto h4, .chico__texto h4 {
+  font-size: convertir(18);
+  margin: 0;
+}
+.chica__texto h6, .chico__texto h6 {
+  font-size: convertir(16);
+  margin: 0;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 420px) and (orientation: portrait) {
+  .chica__texto, .chico__texto {
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+    top: 85%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 868px) and (orientation: portrait) {
+  .chica__texto, .chico__texto {
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    left: 53%;
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .chica__texto, .chico__texto {
+    background-color: #fff;
+    align-self: flex-start;
+  }
 }
