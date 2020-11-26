@@ -1,5 +1,24 @@
+//le damos a la seccion del chico un margen arriba
 .main__chico{
     margin-top: convertir(20);
+}
+
+//position relative para los dos sections para poder colocar la flecha
+.main__chica, .main__chico{
+ position:relative;
+    
+}
+
+.chica__flecha{
+    @include mediaQuery(mobil){
+        position: absolute;
+        left: 40%;
+    }
+    @include mediaQuery(escritorio){
+        position: absolute;
+        top: 43%;
+        left: 48%;
+    }
 }
 section{
     @include mediaQuery(ipad){

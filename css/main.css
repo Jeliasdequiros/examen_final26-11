@@ -454,6 +454,28 @@ body {
   margin-top: 1.25rem;
 }
 
+.main__chica, .main__chico {
+  position: relative;
+}
+
+.chica__flecha {
+  /* VARIABLES */
+  /* VARIABLES */
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 420px) and (orientation: portrait) {
+  .chica__flecha {
+    position: absolute;
+    left: 40%;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .chica__flecha {
+    position: absolute;
+    top: 43%;
+    left: 48%;
+  }
+}
+
 section {
   /* VARIABLES */
   /* VARIABLES */
