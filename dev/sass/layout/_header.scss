@@ -1,3 +1,14 @@
+//tamaño para h1 logotipo de desktop
+.menu__logotipo{
+    font-size:$size-logo-desktop;
+}
+
+//tamaño para el menú hamburguesa
+.header__hamb__img{
+    width:convertir(45);
+    height: convertir(45);
+}
+
 //-caracteristicas generales para header
 .header{
     background-color: $gris;
@@ -10,10 +21,26 @@
         justify-content: flex-start;
     }
     @include mediaQuery(ipad){
-        justify-content: flex-end;
-        padding: 0 convertir(40);
-       
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content:space-between;
+        font-size:$size18;
+
     }
+}
+
+//colocacion del h1 Logotipo en movil
+.header__logo_texto{
+    @include mediaQuery(mobil){
+        padding: 0 0 0 convertir(60);
+        font-size:$size18;
+    }
+
+    //quitamos dela vista del escritorio el h1 logotipo para incluirlo en el nav
+    @include mediaQuery(escritorio){
+        display:none;
+    }
+
 }
 a{
     text-decoration: none;
@@ -40,9 +67,11 @@ label{
         display:flex;
         width:50%;
         justify-content: space-between;
+        align-items: center;
         font-size:$size18;
         font-weight: bold;
 
     }
 
 }
+

@@ -350,6 +350,15 @@ template {
   display: none;
 }
 
+.menu__logotipo {
+  font-size: convertir(39.43);
+}
+
+.header__hamb__img {
+  width: 2.8125rem;
+  height: 2.8125rem;
+}
+
 .header {
   background-color: #C4C4C4;
   height: 10vh;
@@ -367,8 +376,26 @@ template {
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 868px) and (orientation: portrait) {
   .header {
-    justify-content: flex-end;
-    padding: 0 2.5rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-size: convertir(18);
+  }
+}
+
+.header__logo_texto {
+  /* VARIABLES */
+  /* VARIABLES */
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 420px) and (orientation: portrait) {
+  .header__logo_texto {
+    padding: 0 0 0 3.75rem;
+    font-size: convertir(18);
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .header__logo_texto {
+    display: none;
   }
 }
 
@@ -410,6 +437,7 @@ label {
     display: flex;
     width: 50%;
     justify-content: space-between;
+    align-items: center;
     font-size: convertir(18);
     font-weight: bold;
   }
