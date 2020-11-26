@@ -22,6 +22,7 @@
         justify-content: flex-start;
     }
     @include mediaQuery(ipad){
+        width:100%;
         display:flex;
         flex-direction: row-reverse;
         justify-content:space-between;

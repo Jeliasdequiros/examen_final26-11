@@ -71,8 +71,8 @@ section{
 @include mediaQuery(ipad){
     position: absolute;
     z-index: 1;
-    top: 80%;
-    left: 53%;
+    top: 75%;
+    left: 50%;
     width:50%;
 }
 @include mediaQuery(escritorio){
