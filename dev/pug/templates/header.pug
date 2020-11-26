@@ -1,11 +1,14 @@
 //- Logotipo
-h1.header__logotipo
+label.header__logo(for="click")
+    img.header__logotipo(src="assets/img/svg/menu.svg", alt="")
+input(type="checkbox" id="click")
 //- Menu Principal
 nav.header__menu
-    //- Opción de cambio general
-    block link_index
-        a.menu__quienes(href="index.html") Quienes Somos
-    block link_galeria
-        a.menu__galeria(href="galeria.html") Galeria
-    block link_blog
-        a.menu__blog(href="blog.html") Blog
+    
+   
+        a.menu__inicio(href="index.html") Inicio
+    
+        a.menu__proyectos(href="proyectos.html") Proyectos
+   
+        a.menu__quienes(href="quienes.html") Quienes Somos
+        a.menu__contactar(href="contactar.html") contactar

@@ -1,0 +1,48 @@
+//-caracteristicas generales para header
+.header{
+    background-color: $gris;
+    height: 10vh;
+    padding: convertir(10);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    @include mediaQuery(mobil){
+        justify-content: flex-start;
+    }
+    @include mediaQuery(ipad){
+        justify-content: flex-end;
+        padding: 0 convertir(40);
+       
+    }
+}
+a{
+    text-decoration: none;
+    color:$negro;
+}
+//input siempre estara invisible
+input{
+    display:none;
+}
+//el menú hamburguesa no aparecerá en escritorio
+label{
+    @include mediaQuery(escritorio){
+        display:none;
+    }
+}
+.header__menu{
+    @include mediaQuery(mobil){
+        display:none;
+    }
+    @include mediaQuery(ipad){
+        display:none;
+    }
+    @include mediaQuery(escritorio){
+        display:flex;
+        width:50%;
+        justify-content: space-between;
+        font-size:$size18;
+        font-weight: bold;
+
+    }
+
+}
